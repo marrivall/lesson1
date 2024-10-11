@@ -1,3 +1,52 @@
+#hashtag
+import string
+phrase = input("Enter your phrase: ")
+
+for symbol in phrase:
+ if symbol  in string.punctuation:
+     phrase = phrase.replace("symbol", "")
+
+words = phrase.split()
+phrasewords = []
+for word in words:
+    phrasewords.append(word.capitalize())
+phrase = " ".join(phrasewords)
+hashtag = "#" + "".join(phrasewords)
+
+if len(phrase) > 140:
+    hashtag = phrase[:140]
+
+print(hashtag)
+
+
+# Ім'я змінної
+import string
+import keyword
+# print (keyword.kwlist)
+name = input("Enter name:")
+
+valid_name = True
+
+if name[0].isdigit():
+    valid_name = False
+
+if name.upper():
+    valid_name = False
+
+for symbol in name:
+  if symbol  in string.punctuation != "_" :
+     valid_name = False
+
+if name.count("_")  <= 1:
+        valid_name = True
+
+if name in keyword.kwlist:
+  valid_name =  False
+
+print(valid_name)
+
+
+
 #Модифікувати калькулятор
 while True:
         n1 = int(input("Enter your first number: "))
