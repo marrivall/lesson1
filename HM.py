@@ -1,3 +1,32 @@
+#Модифікувати калькулятор
+while True:
+        n1 = int(input("Enter your first number: "))
+        maths_operation = input("Select your choice (+, -, *, /): ")
+        n2 = int(input("Enter your second number: "))
+        match maths_operation:
+            case "+":
+                result = n1+n2
+            case "-":
+                result = n1-n2
+            case "*":
+                result = n1*n2
+            case "/":
+                result = n1/n2
+                if result == 0:
+                    print("Ділення на 0 не дозволено")
+        print("Result:", result)
+        question = input("Продовжити роботу? (yes,no): ")
+        if question  in "yes":
+            continue
+        elif question in "no":
+            print("Завершення роботи")
+            break
+
+
+
+
+
+
 #Список із 3 елементів
 i = 0
 import random
