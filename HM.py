@@ -1,3 +1,20 @@
+#Діапазон букв
+import string
+letters = input("Введіть дві літери через дефіс: ")
+
+letters = letters.replace("-", " ")
+letter_one, letter_two = letters.split()
+letters = string.ascii_letters
+
+letter_one = letters.index(letter_one)
+letter_two = letters.index(letter_two)
+result = letters[letter_one:letter_two +1]
+print("Result:", result)
+
+
+
+
+
 #hashtag
 import string
 phrase = input("Enter your phrase: ")
