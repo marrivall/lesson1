@@ -1,3 +1,20 @@
+#Конвертер із числа в дату
+number = seconds = int(input("Enter your number:"))
+if number in range(0, 8640000):
+    days = seconds // (24 * 60 * 60)
+    seconds = seconds % (24 * 3600) #3600 секунди в годині
+    hours = seconds // 3600
+    seconds = seconds % 3600
+    minutes = seconds // 60
+    seconds = seconds % 60
+    result = f" {days}:{hours}:{minutes}:{seconds}"
+    print(result)
+else:
+           print("incorrect number")
+
+
+
+
 #Діапазон букв
 import string
 letters = input("Введіть дві літери через дефіс: ")
