@@ -1,3 +1,14 @@
+#Вітання
+def say_hi(name, surname, age):
+  return f"Hi. My name is {name} {surname} and I'm {age} years old"
+
+assert say_hi("Alex", "Dudkin", 60) == "Hi. My name is Alex Dudkin and I'm 60 years old", 'Test1'
+assert say_hi("Frank", "Pupkin", 18) == "Hi. My name is Frank Pupkin and I'm 18 years old", 'Test2'
+
+print(say_hi("Alex", "Dudkin", 60))
+print(say_hi("Frank", "Pupkin", 18))
+
+
 # Добуток чисел
 number = int(input("Enter your number:"))
 while number > 9:
