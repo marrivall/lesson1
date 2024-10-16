@@ -1,3 +1,14 @@
+# Добуток чисел
+number = int(input("Enter your number:"))
+while number > 9:
+    result = 1
+    while number > 0:
+     num = number % 10
+     number = number // 10
+     result = result * num
+    number = result
+    print(result)
+
 #Конвертер із числа в дату
 number = seconds = int(input("Enter your number:"))
 if number in range(0, 8640000):
