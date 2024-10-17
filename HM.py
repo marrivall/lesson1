@@ -1,3 +1,19 @@
+#Модифікувати рядок
+def correct_sentence(text):
+    if not text.endswith("."):
+         text = text + "."
+    sep = len(text) // 2
+    part_1 = text[:sep].capitalize()
+    part_2 = text[sep:]
+    text = part_1 + part_2
+    return text
+assert correct_sentence("greetings, friends") == "Greetings, friends.", 'Test1'
+assert correct_sentence("hello") == "Hello.", 'Test2'
+assert correct_sentence("Greetings. Friends") == "Greetings. Friends.", 'Test3'
+assert correct_sentence("Greetings, friends.") == "Greetings, friends.", 'Test4'
+assert correct_sentence("greetings, friends.") == "Greetings, friends.", 'Test5'
+print("OK")
+
 #Пошук спільних елементів
 def common_elements():
     first_list_3 = {num for num in range(100) if num % 3 == 0}
