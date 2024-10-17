@@ -1,3 +1,14 @@
+#Пошук підрядка
+text = input("Перший рядок:")
+some_str = input("Другий рядок: ")
+def second_index(text, some_str):
+    first_index = text.find(some_str)
+    if first_index != -1:
+        second_index = text.find(some_str, first_index + 1)
+    if second_index != -1:
+     return second_index
+print(second_index(text, some_str))
+
 #Вітання
 def say_hi(name, surname, age):
   return f"Hi. My name is {name} {surname} and I'm {age} years old"
