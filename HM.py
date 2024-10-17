@@ -1,3 +1,12 @@
+#Пошук спільних елементів
+def common_elements():
+    first_list_3 = {num for num in range(100) if num % 3 == 0}
+    second_list_5 = {num for num in range(100) if num % 5 ==0}
+    common_el = first_list_3.intersection(second_list_5)
+    return common_el
+assert common_elements() == {0, 75, 45, 15, 90, 60, 30}
+print("OK")
+
 #Пошук підрядка
 text = input("Перший рядок:")
 some_str = input("Другий рядок: ")
