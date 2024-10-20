@@ -1,3 +1,24 @@
+#Унікальне число
+def find_unique_value(nums: list[int]) -> list[int]:
+    for num in nums:
+        if nums.count(num) == 1:
+            return num
+assert find_unique_value([1, 2, 1, 1]) == 2, 'Test1'
+assert find_unique_value([2, 3, 3, 3, 5, 5]) == 2, 'Test2'
+assert find_unique_value([5, 5, 5, 2, 2, 0.5]) == 0.5, 'Test3'
+print("ОК")
+
+nums_list = input("Enter no more than 10 numbers:" )
+numbers = nums_list.split()
+if len(numbers) > 10:
+    print("Invalid numbers. Please enter no more than 10 numbers.")
+else:
+    unique_value = []
+    for num in numbers:
+        if numbers.count(num) == 1:
+            unique_value.append(num)
+    print(unique_value)
+
 #Паліандром
 def is_palindrome(text):
     phrase = []
