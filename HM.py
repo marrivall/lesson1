@@ -1,3 +1,18 @@
+#Додати 1
+def add_one(some_list):
+    one_number = ''.join([str(n) for n in some_list])
+    result = int(one_number) + 1
+    numbers =[]
+    for n in str(result):
+        num = int(n)
+        numbers.append(num)
+    return numbers
+assert add_one([1, 2, 3, 4]) == [1, 2, 3, 5], 'Test1'
+assert add_one([9, 9, 9]) == [1, 0, 0, 0], 'Test2'
+assert add_one([0]) == [1], 'Test3'
+assert add_one([9]) == [1, 0], 'Test4'
+print("ОК")
+
 #Унікальне число
 def find_unique_value(nums: list[int]) -> list[int]:
     for num in nums:
