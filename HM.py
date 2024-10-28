@@ -1,3 +1,16 @@
+#Генераторна функція
+def some_gen(begin, end, func):
+    for x in range(end):
+        yield begin
+        begin = func(begin)
+
+from inspect import isgenerator
+
+gen = some_gen(2, 4, lambda x: x ** 2)
+assert isgenerator(gen) == True, 'Test1'
+assert list(gen) == [2, 4, 16, 256], 'Test2'
+print('OK')
+
 #Перевірити чи є парним чи ні
 def is_even(digit):
     return digit % 2 == 0
