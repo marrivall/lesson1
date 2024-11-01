@@ -1,3 +1,14 @@
+# Перевірка на парність.
+def is_even(number):
+    num_is_even = str(number)[-1] in "02468"
+    return num_is_even
+
+assert is_even(2494563894038**2) == True, 'Test1'
+assert is_even(1056897**2) == False, 'Test2'
+assert is_even(24945638940387**3) == False, 'Test3'
+print('Ok')
+
+
 # Заповнення списку кубами чисел
 def generate_cube_numbers(end):
     for x in range(2, end):
