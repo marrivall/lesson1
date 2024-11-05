@@ -1,3 +1,58 @@
+#Корзина для покупок
+class Item:
+    def __init__(self, name, price, description, dimensions):
+        self.price = price
+        self.description = description
+        self.dimensions = dimensions
+        self.name = name
+
+    def __str__(self):
+        return f"Name: {self.name}, Price: {self.price}, Dimensions: {self.dimensions}, Description: {self.description} "
+
+class User:
+    def __init__(self, name, surname, phonenumber):
+        self.name = name
+        self.surname = surname
+        self.phonenumber = phonenumber
+
+    def __str__(self):
+        return f"{self.name} {self.surname}, Phone: {self.phonenumber}"
+
+class Purchase:
+    def __init__(self, user):
+        self.products = {}
+        self.user = user
+
+    def add_item(self, item, cnt):
+        if  item not in self.products:
+            self.products[item] = cnt
+        else:
+            self.products[item] += cnt
+
+    def __str__(self):
+        all_products = ""
+        for product, count in self.products.items():
+            all_products = all_products + f"\n{product.name}:{count}pcs."
+        return f"User: {self.user}\nItems: {all_products}\nTotal_cnt: {self.get_total()}"
+
+    def get_total(self):
+        return sum(product.price*count for product, count in self.products.items())
+
+lemon = Item('lemon', 5, "yellow", "small", )
+apple = Item('apple', 2, "red", "middle", )
+print(lemon)
+print(apple)
+buyer = User("Ivan", "Ivanov", "02628162")
+
+cart = Purchase(buyer)
+cart.add_item(lemon, 4)
+cart.add_item(apple, 20)
+print(cart)
+assert isinstance(cart.user, User) is True, 'Екземпляр класу User'
+assert cart.get_total() == 60, "Всього 60"
+assert cart.get_total() == 60, 'Повинно залишатися 60!'
+print("Ok")
+
 # Генератор простих чисел
 def prime_generator(end):
     for num in range(2, end+1):
