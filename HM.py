@@ -1,3 +1,17 @@
+#Очистити текст від html-тегів
+import codecs
+import re
+def delete_html_tags(html_file, result_file='cleaned.txt'):
+      with codecs.open(html_file, 'r', 'utf-8') as file:
+          no_tags_text = []
+          for line in file:
+              no_tags_text = no_tags_text + re.findall(r'>(.+)</', line)
+          if len(no_tags_text) > 0:
+            print (f"Result:{no_tags_text}")
+            with codecs.open(result_file, 'w', 'utf-8') as new_file:
+                  new_file.write('\n'.join(no_tags_text))
+delete_html_tags('D:\\Завантаження\\draft (1).html')
+
 #Корзина для покупок
 class Item:
     def __init__(self, name, price, description, dimensions):
