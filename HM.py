@@ -15,7 +15,7 @@ class Student(Human):
         self.record_book = record_book
 
     def __str__(self):
-        return f"Student: Name:{self.name}, Surname:{self.surname}, Record_book: {self.record_book}"
+        return f"Student: Gender: {self.gender}, Age: {self.age}, Name:{self.name}, Surname:{self.surname}, Record_book: {self.record_book}"
 
 class Group:
     def __init__(self, number):
@@ -50,6 +50,7 @@ assert isinstance(gr.find_student('Jobs'), Student) is True, 'Метод пои�
 gr.delete_student('Taylor')
 print(gr)
 gr.delete_student('Taylor')  # No error!
+
 
 #Очистити текст від html-тегів
 import codecs
