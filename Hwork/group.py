@@ -9,7 +9,7 @@ class Group:
 
     def add_student(self, student):
         if len(self.group) > self.student_limit:
-            raise GroupLimitException("The limit щof students is exceeded")
+            raise GroupLimitException("The limit of students is exceeded")
         if isinstance(student, Student):
             self.group.add(student)
 
