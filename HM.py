@@ -1,3 +1,92 @@
+# Клас «Правильний дріб»
+class Fraction:
+    def __init__(self, numer , den): #numer - numerator, den - denominator
+        if den == 0 or numer >= den:
+            raise ValueError("Denominator can't be 0 and shouldn't be smaller than numerator")
+        self.numer  = numer
+        self.den = den
+
+    def __float__(self):
+        return self.numer/self.den
+
+    def __mul__(self, other):
+        if isinstance(other, Fraction):
+            new_numer = self.numer * other.numer
+            new_den = self.den * other.den
+            return Fraction(new_numer, new_den)
+        else:
+            raise ValueError("Illegal type of the argument")
+
+    def __add__(self, other):
+        if isinstance(other, Fraction):
+            if self.den == other.den:
+                return Fraction(self.numer + other.numer, self.den)
+            else:
+                new_denom = self.den * other.den
+                new_numer = (self.numer * other.den) + (other.numer * self.den)
+                return Fraction(new_numer, new_denom)
+        else:
+            raise ValueError("Illegal type of the argument")
+
+    def __sub__(self, other):
+        if isinstance(other, Fraction):
+            if self.den != other.den:
+                new_numer = self.numer * other.den - other.numer * self.den
+                new_den = self.den * other.den
+            else:
+                new_numer = self.numer - other.numer
+                new_den = self.den
+            return Fraction(new_numer, new_den)
+        else:
+            raise ValueError("Illegal type of the argument")
+
+    def __eq__(self, other):
+        if isinstance(other, Fraction):
+            return (self.numer == other.numer) and (self.den == other.den)
+        else:
+            return False
+
+    def __lt__(self, other):
+        if isinstance(other, Fraction):
+            return self.__float__() < other.__float__()
+        else:
+            return False
+
+    def __gt__(self, other):
+        if isinstance(other, Fraction):
+            return self.__float__() > other.__float__()
+        else:
+            return False
+
+    def __str__(self):
+        return f"Fraction:{self.numer}, {self.den}"
+
+f_a = Fraction(2, 3)
+f_b = Fraction(3, 6)
+f_c = f_b + f_a
+assert str(f_c) == 'Fraction: 21, 18'
+f_d = f_b * f_a
+assert str(f_d) == 'Fraction: 6, 18'
+f_e = f_a - f_b
+assert str(f_e) == 'Fraction: 3, 18'
+
+assert f_d < f_c  # True
+assert f_d > f_e  # True
+assert f_a != f_b  # True
+f_1 = Fraction(2, 4)
+f_2 = Fraction(3, 6)
+assert f_1 == f_2  # True
+print('OK')
+
+
+
+
+
+
+
+
+
+
 # Створити клас цифрового лічильника.
 class Counter:
    def __init__(self, current=1, min_value=0, max_value=10):
