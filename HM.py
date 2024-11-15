@@ -13,7 +13,8 @@ class Fraction:
         if isinstance(other, Fraction):
             new_numer = self.numer * other.numer
             new_den = self.den * other.den
-            return Fraction(new_numer, new_den)
+            result = Fraction(new_numer, new_den)
+            return result
         else:
             raise ValueError("Illegal type of the argument")
 
@@ -24,7 +25,7 @@ class Fraction:
             else:
                 new_denom = self.den * other.den
                 new_numer = (self.numer * other.den) + (other.numer * self.den)
-                return Fraction(new_numer, new_denom)
+            return Fraction(new_numer, new_denom)
         else:
             raise ValueError("Illegal type of the argument")
 
@@ -42,7 +43,7 @@ class Fraction:
 
     def __eq__(self, other):
         if isinstance(other, Fraction):
-            return (self.numer == other.numer) and (self.den == other.den)
+            return self.numer * other.den == other.numer * self.den
         else:
             return False
 
@@ -59,7 +60,7 @@ class Fraction:
             return False
 
     def __str__(self):
-        return f"Fraction:{self.numer}, {self.den}"
+        return f"Fraction: {self.numer}, {self.den}"
 
 f_a = Fraction(2, 3)
 f_b = Fraction(3, 6)
