@@ -1,3 +1,92 @@
+# дописать остальные операторы в классе Car
+class Car:
+    def __init__(self, name, price, year): #year - year of production
+        self.name = name
+        self.price = price
+        self.year = year
+
+    def show_info(self):
+        print(f"Name: {self.name}")
+        print(f"Price: {self.price}")
+        print(f"Year of production: {self.year}")
+
+    def __add__(self, other):
+        if isinstance(other, Car):
+              return self.price + other.price
+        elif other > 0:
+             return self.price + other
+        else:
+             raise ValueError("Incorrect param")
+
+    def __sub__(self, other):
+        if isinstance(other, Car):
+            if other.year > self.year:
+                return other.year - self.year
+            else:
+                return self.year - other.year
+        else:
+            raise ValueError("Incorrect param")
+
+    def __mul__(self, other):
+        if isinstance(other, Car):
+            return self.price * other.price
+        else:
+            raise ValueError("Incorrect param")
+
+    def __truediv__(self, other):
+        if isinstance(other, Car):
+            if other.price > self.price:
+                return other.price / self.price
+            else:
+                return self.price / other.price
+        else:
+            raise ValueError("Incorrect param")
+
+    def __gt__(self, other):
+        if isinstance(other, Car):
+            return self.price > other.price
+        else:
+            raise ValueError("Incorrect param")
+
+    def __lt__(self, other):
+        if isinstance(other, Car):
+            return self.price < other.price
+        else:
+            raise ValueError("Incorrect param")
+
+    def __eq__(self, other):
+        if isinstance(other, Car):
+            return self.price == other.price
+        else:
+            raise ValueError("Incorrect param")
+
+
+toyota = Car("camry", 123456, 1982)
+toyota.show_info()
+
+bmw = Car("x5", 321654, 1999)
+bmw.show_info()
+
+result = toyota + bmw
+print(result)
+
+result = toyota + 123
+print(result)
+
+result = toyota - bmw
+print(result)
+
+result = toyota * bmw
+print(result)
+
+result = toyota / bmw
+print(result)
+
+print(toyota > bmw) #False
+print(toyota < bmw) #True
+print(toyota == bmw) #false
+
+
 # «Прямокутник
 nums = (int, float)
 class Rectangle:
