@@ -1,8 +1,8 @@
 # Клас «Правильний дріб»
 class Fraction:
     def __init__(self, numer , den): #numer - numerator, den - denominator
-        if den == 0 or numer >= den:
-            raise ValueError("Denominator can't be 0 and shouldn't be smaller than numerator")
+        if den == 0:
+            raise ValueError("Denominator can't be 0")
         self.numer  = numer
         self.den = den
 
