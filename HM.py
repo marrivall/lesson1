@@ -539,6 +539,56 @@ print (nums)
 
 
 
+#Список із 3 елементів
+i = 0
+import random
+list1 = []
+NUM_SIZE = 10
+for i in range (NUM_SIZE):
+ list1.append (random.randint(3,10))
+print (list1)
+
+list2 = list1 [0], list1 [2], list1 [-2]
+print (list2)
+
+
+
+#Знайти суму елементів із парними індексами
+i = 0
+nums = [1,3,5,8,9,6,4]
+for i in range(0, len(nums), 2):
+    print (nums[i])
+nums2 = sum(nums[i] for i in range(0, len(nums), 2))
+result = nums2 * 4
+print ("Result:", result )
+
+
+#Перемістити всі нулі до кінця списку
+nums = [4,0,3,0,5]
+num1 = nums.remove (0)
+num2 = nums.remove (0)
+nums.append(0)
+nums.append(0)
+print (nums)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #HOMEWORK
 # Найпростіший калькулятор
 #V1
@@ -576,14 +626,14 @@ print (nums)
 # print ("Result:", result )
 
 
-#Перемістити елемент у списку
+# #Перемістити елемент у списку
 # numbers = [1,5,7,4,9,8]
 # numbers.insert (0, 8)
 # print (numbers)
 #
-# result = numbers.pop()
-# print (result)
-# print (numbers)
+# # result = numbers.pop()
+# # print (result)
+# # print (numbers)
 
 
 

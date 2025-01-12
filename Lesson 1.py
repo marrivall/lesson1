@@ -10,6 +10,7 @@
 #print("Hello\n\tworld")
 #print()
 #print("Hello\\n\\t\"world\"")
+# from HM import result
 
 #print("Hello world", end="-")
 #print ("test")
@@ -69,45 +70,1559 @@
 
 #HOMEWORK
 #Виведення числа в стовпчик
-number = 4739
-n1 = number // 1000       #ціла частина від ділення всього числа на 1000 =  перше число
-n2 = number % 1000 // 100 #залишок перщої дії ділимо на 100, ціла частина =  друге ціле число
-n3 = number % 100 // 10   #залишок минулої дії ділимо на 10, ціла частина = третє число
-n4 = number % 10          #залишок минулої дії є четвертим числом
-print (n1)
-print (n2)
-print (n3)
-print (n4)
-print()
+#number = 4739
+#n1 = number // 1000       #ціла частина від ділення всього числа на 1000 =  перше число
+#n2 = number % 1000 // 100 #залишок перщої дії ділимо на 100, ціла частина =  друге ціле число
+#n3 = number % 100 // 10   #залишок минулої дії ділимо на 10, ціла частина = третє число
+#n4 = number % 10          #залишок минулої дії є четвертим числом
+#print (n1)
+#print (n2)
+#print (n4)
+#print()
 #"перевернути" 5-ти значне число
-number = 67856
-n1 = number // 10000        #ціла частина від ділення всього числа на 10000 =  перше число
-n2 = number % 10000 // 1000 #залишок першої дії ділимо на 1000, ціла частина =  друге ціле число
-n3 = number % 1000 // 100   #залишок минулої дії ділимо на 100, ціла частина = третє число
-n4 = number % 100 // 10     #залишок минулої дії ділимо на 10, ціла частина = четверте число
-n5 = number % 10            #залишок минулої дії є п'ятим числом
-print (n1)
-print (n2)
-print (n3)
-print (n4)
-print(n5)
-print()
-result = (6*10000)+(5*1000)+(8*100)+(7*10)+6 #перевертаємо число, роблячи додавання отриманих чисел у зворотньому порядку
-print ("Result:", result )
+#number = 67856
+#n1 = number // 10000        #ціла частина від ділення всього числа на 10000 =  перше число
+#n2 = number % 10000 // 1000 #залишок першої дії ділимо на 1000, ціла частина =  друге ціле число
+#n3 = number % 1000 // 100   #залишок минулої дії ділимо на 100, ціла частина = третє число
+#n4 = number % 100 // 10     #залишок минулої дії ділимо на 10, ціла частина = четверте число
+#n5 = number % 10            #залишок минулої дії є п'ятим числом
+#print (n1)
+#print (n2)
+#print (n3)
+#print (n4)
+#print(n5)
+#print()
+#result = (6*10000)+(5*1000)+(8*100)+(7*10)+6 #перевертаємо число, роблячи додавання отриманих чисел у зворотньому порядку
+#print ("Result:", result )
+
+#hours=int(input("Enter hours: "))
+#if hours >=12:
+#    print("PM")
+#else:
+#    print ("AM")
+
+#if 12 <= hours < 24:
+ #   print("PM")
+#elif 0 <= hours < 12:
+  #  print ("AM")
+#else:
+  #  print("Incorrect hours!")
+
+#film_rating = int(input("Enter film rating:"))
+#if 0 < film_rating <= 5: #film_rating > 0 and film_rating <= 5
+#    if film_rating == 4 or film_rating == 5:
+ #       print("Film OK!")
+ #   else:
+ #       print("Film not OK")
+
+#else:
+ # print ("Incorrect Rating!")
+
+
+
+#HOMEWORK
+# Найпростіший калькулятор
+#V1
+# n1 = int(input("Enter your number"))
+# maths_operation = input("Select your choice (+, -, *, /" )
+# n2 = int(input("Enter your number"))
+# if maths_operation == "+":
+#     result = n1+n2
+# elif maths_operation == "-":
+#     result = n1 - n2
+# elif maths_operation == "*":
+#     result = n1 * n2
+# elif maths_operation == "/"!= 0:
+#     result = n1 / n2
+# else:
+#     print ("Invalid input, please, try again")
+#
+# print ("Result:", result)
+
+#V2
+# n1 = int(input("Enter your number"))
+# maths_operation = input("Select your choice (+, -, *, /" )
+# n2 = int(input("Enter your number"))
+# match maths_operation:
+#     case "+":
+#         result = n1+n2
+#     case "-":
+#         result = n1 - n2
+#     case "*":
+#         result = n1*n2
+#     case "/":
+#         result = n1/n2
+#     case "/!= 0":
+#           print ("Invalid input, please, try again")
+# print ("Result:", result )
+
+
+#Перемістити елемент у списку
+# numbers = [1,5,7,4,9,8]
+# numbers.insert (0, 8)
+# print (numbers)
+#
+# result = numbers.pop()
+# print (result)
+# print (numbers)
+
+
+
+#Розділити один список на два
+# 1)
+# nums = [2,5,8,3,9,4]
+# first_part = nums[:len(nums) // 2]
+# second_part = nums[:len(nums) // 2:]
+# result = [first_part,second_part]
+# print (result)
+#2)
+# nums = [3,7,6,4,9]
+# first_part = nums[:3]
+# second_part = nums [3:]
+# result = [first_part,second_part]
+# print (result)
+#3)
+# nums = []
+# first_part = nums [:len(nums)//2]
+# second_part = nums [len (nums) //2 :]
+# result = [first_part,second_part]
+# print (result)
+
+
+# i = 0
+# while i< 5 :
+#     print(i,end = " ")
+#     i += 1 # i = i + i
+# print ("test")
+
+
+# import time
+# i=12
+# while True:
+#     print(i)
+#     i +=2
+#     time.sleep(1)
+
+
+# for i in range (1, 10, 5):
+#     # print ("hello")
+#     print (i,end=" ")
+
+
+# i = 0
+# nums = [1,3,5,8,9,6,4]
+# for i in range(0, len(nums), 2):
+#     print (nums[i])
+# nums2 = sum(nums[i] for i in range(0, len(nums), 2))
+# result = nums2 * 4
+# print ("Result:", result )
+
+
+
+# nums = [4,0,3,0,5]
+# num1 = nums.remove (0)
+# num2 = nums.remove (0)
+# nums.append(0)
+# nums.append(0)
+# print (nums)
+
+
+
+
+# i = 0
+# import random
+# list1 = []
+# NUM_SIZE = 10
+# for i in range (NUM_SIZE):
+#  list1.append (random.randint(3,10))
+# print (list1)
+#
+# list2 = list1 [0], list1 [2], list1 [-2]
+# print (list2)
+
+
+
+#v1
+# sentence = "hello, world"
+# for letter in sentence:
+#     print(letter,end=" ")
+# print()
+#v2
+# for i in range (len(sentence)):
+#     print(sentence[i],end=" ")
+
+
+# import random
+# import string
+#
+# MIN_PASSWORD_LENGTH = 8
+# MAX_PASSWORD_LENGTH = 16
+# data_for_password = string.ascii_letters + string.punctuation + string.digits
+# #print(data_for_password)
+#
+#
+# while True:
+#     user_input=input(f"Enter your password length (from{MIN_PASSWORD_LENGTH} to {MAX_PASSWORD_LENGTH}):")
+#
+# assword_raw = []
+# for _ in range (8):
+#     password_raw.append(random.choice(data_for_password))
+# p
+# # print(password_raw)
+# random.shuffle(password_raw)
+#
+# # print(password_raw)
+#
+# password = "".join(password_raw)
+# print()
+
+
+# Ім'я змінної
+# import string
+# import keyword
+# # print (keyword.kwlist)
+# name = input("Enter name:")
+#
+# valid_name = True
+#
+# if name[0].isdigit():
+#     valid_name = False
+#
+# if name.upper():
+#     valid_name = False
+#
+# for symbol in name:
+#   if symbol  in string.punctuation != "_" :
+#      valid_name = False
+#
+# if name.count("_")  <= 1:
+#         valid_name = True
+#
+# if name in keyword.kwlist:
+#   valid_name =  False
+#
+# print(valid_name)
+
+
+#2
+#Модифікувати калькулятор
+# while True:
+#         n1 = int(input("Enter your first number: "))
+#         maths_operation = input("Select your choice (+, -, *, /): ")
+#         n2 = int(input("Enter your second number: "))
+#         match maths_operation:
+#             case "+":
+#                 result = n1+n2
+#             case "-":
+#                 result = n1-n2
+#             case "*":
+#                 result = n1*n2
+#             case "/":
+#                 result = n1/n2
+#                 if result == 0:
+#                     print("Ділення на 0 не дозволено")
+#         print("Result:", result)
+#         question = input("Продовжити роботу? (yes,no): ")
+#         if question  in "yes":
+#             continue
+#         elif question in "no":
+#             print("Завершення роботи")
+#             break
+
+
+
+#hashtag
+# import string
+# phrase = input("Enter your phrase: ")
+#
+# for symbol in phrase:
+#  if symbol  in string.punctuation:
+#      phrase = phrase.replace("symbol", "")
+#
+# words = phrase.split()
+# phrasewords = []
+# for word in words:
+#     phrasewords.append(word.capitalize())
+# phrase = " ".join(phrasewords)
+# hashtag = "#" + "".join(phrasewords)
+#
+# if len(phrase) > 140:
+#     hashtag = phrase[:140]
+#
+# print(hashtag)
+
+
+# Добуток чисел
+# number = int(input("Enter your number:"))
+# while number > 9:
+#     result = 1
+#     while number > 0:
+#      num = number % 10
+#      number = number // 10
+#      result = result * num
+#     number = result
+#     print(result)
+
+
+#v1
+# number = seconds = int(input("Enter your number:"))
+# if number in range(0, 8640000):
+#     days = seconds // (24 * 60 * 60)
+#     seconds = seconds % (24 * 3600) #3600 = 60*60 - секунди в 1 годині
+#     hours = seconds // 3600
+#     seconds = seconds % 3600
+#     minutes = seconds // 60
+#     seconds = seconds % 60
+#     result = f" {days}:{hours}:{minutes}:{seconds}"
+#     print(result)
+# else:
+#            print("incorrect number")
+
+
+
+#Діапазон букв
+# import string
+# letters = input("Введіть дві літери через дефіс: ")
+#
+# letters = letters.replace("-", " ")
+# letter_one, letter_two = letters.split()
+# letters = string.ascii_letters
+#
+# letter_one = letters.index(letter_one)
+# letter_two = letters.index(letter_two)
+# result = letters[letter_one:letter_two +1]
+# print("Result:", result)
+
+#Вітання
+# def say_hi(name, surname, age):
+#   return f"Hi. My name is {name} {surname} and I'm {age} years old"
+# assert say_hi("Alex", "Dudkin", 60) == "Hi. My name is Alex Dudkin and I'm 60 years old", 'Test1'
+# assert say_hi("Frank", "Pupkin", 18) == "Hi. My name is Frank Pupkin and I'm 18 years old", 'Test2'
+# print(say_hi("Alex", "Dudkin", 60))
+# print(say_hi("Frank", "Pupkin", 18))
+
+#
+#Модифікувати рядок
+# def correct_sentence(text):
+#     if not text.endswith("."):
+#          text = text + "."
+#     sep = len(text) // 2
+#     part_1 = text[:sep].capitalize()
+#     part_2 = text[sep:]
+#     text = part_1 + part_2
+#     return text
+#
+# assert correct_sentence("greetings, friends") == "Greetings, friends.", 'Test1'
+# assert correct_sentence("hello") == "Hello.", 'Test2'
+# assert correct_sentence("Greetings. Friends") == "Greetings. Friends.", 'Test3'
+# assert correct_sentence("Greetings, friends.") == "Greetings, friends.", 'Test4'
+# assert correct_sentence("greetings, friends.") == "Greetings, friends.", 'Test5'
+# print("OK")
 
 
 
 
 
+# #Пошук підрядка
+# text = input("Перший рядок:")
+# some_str = input("Другий рядок: ")
+# def second_index(text, some_str):
+#     first_index = text.find(some_str)
+#     if first_index != -1:
+#         second_index = text.find(some_str, first_index + 1)
+#     if second_index != -1:
+#      return second_index
+# print(second_index(text, some_str))
+#
+# #Пошук спільних елементів
+# def common_elements():
+#     first_list_3 = {num for num in range(100) if num % 3 == 0}
+#     second_list_5 = {num for num in range(100) if num % 5 ==0}
+#     common_el = first_list_3.intersection(second_list_5)
+#     return common_el
+# assert common_elements() == {0, 75, 45, 15, 90, 60, 30}
+# print("OK")
+
+
+#Додати 1
+# def add_one(some_list):
+#     one_number = ''.join([str(n) for n in some_list])
+#     result = int(one_number) + 1
+#     numbers =[]
+#     for n in str(result):
+#         num = int(n)
+#         numbers.append(num)
+#     return numbers
+# assert add_one([1, 2, 3, 4]) == [1, 2, 3, 5], 'Test1'
+# assert add_one([9, 9, 9]) == [1, 0, 0, 0], 'Test2'
+# assert add_one([0]) == [1], 'Test3'
+# assert add_one([9]) == [1, 0], 'Test4'
+# print("ОК")
+
+
+
+#Унікальне число
+# def find_unique_value(nums: list[int]) -> list[int]:
+#     for num in nums:
+#         if nums.count(num) == 1:
+#             return num
+# assert find_unique_value([1, 2, 1, 1]) == 2, 'Test1'
+# assert find_unique_value([2, 3, 3, 3, 5, 5]) == 2, 'Test2'
+# assert find_unique_value([5, 5, 5, 2, 2, 0.5]) == 0.5, 'Test3'
+# print("ОК")
+#
+# nums_list = input("Enter no more than 10 numbers:" )
+# numbers = nums_list.split()
+# if len(numbers) > 10:
+#     print("Invalid numbers. Please enter no more than 10 numbers.")
+# else:
+#     unique_value = []
+#     for num in numbers:
+#         if numbers.count(num) == 1:
+#             unique_value.append(num)
+#     print(unique_value)
+
+
+# Паліандром
+# def is_palindrome(text):
+#     phrase = []
+#     for symbol in text:
+#         if symbol.isalpha() or symbol.isdigit():
+#             phrase.append(symbol.lower())
+#     phrase = "".join(phrase)
+#     is_palindrome = phrase == phrase[::-1]
+#     return is_palindrome
+#
+# assert is_palindrome('A man, a plan, a canal: Panama') == True, 'Test1'
+# assert is_palindrome('0P') == False, 'Test2'
+# assert is_palindrome('a.') == True, 'Test3'
+# assert is_palindrome('aurora') == False, 'Test4'
+# print("ОК")
 
 
 
 
+# Шукані слова завжди вказані в нижньому регістрі
+# def popular_words (text, words):
+#     text =  text.lower().split()
+#     popular_words = {}
+#     for word in words:
+#         result = text.count(word)
+#         popular_words[word] = result
+#     return popular_words
+# assert (popular_words('''When I was One I had just begun When I was Two I was nearly new ''', ['i', 'was', 'three', 'near'])
+#         == { 'i': 4, 'was': 3, 'three': 0, 'near': 0 }), 'Test1'
+# print('OK')
+
+# Різниця між числами
+# def difference (*nums):
+#     if  len(nums) == 0:
+#         return 0
+#     difference = round(max(nums)-min(nums), 2)
+#     return difference
+# assert difference(1, 2, 3) == 2, 'Test1'
+# assert difference(5, -5) == 10, 'Test2'
+# assert difference(10.2, -2.2, 0, 1.1, 0.5) == 12.4, 'Test3'
+# assert difference() == 0, 'Test4'
+# print('OK')
+
+#Перевірити чи є парним чи ні
+# def is_even(digit):
+#     return digit % 2 == 0
+# assert is_even(2) == True, 'Test1'
+# assert is_even(5) == False, 'Test2'
+# assert is_even(0) == True, 'Test3'
+# print('OK')
+
+#Генераторна функція
+# def some_gen(begin, end, func):
+#     for x in range(end):
+#         yield begin
+#         begin = func(begin)
+#
+# from inspect import isgenerator
+#
+# gen = some_gen(2, 4, lambda x: x ** 2)
+# assert isgenerator(gen) == True, 'Test1'
+# assert list(gen) == [2, 4, 16, 256], 'Test2'
+# print('OK')
+
+
+
+#Пошук першого слова
+# def first_word(text):
+#     text = text.replace('.', ' ').replace(',', ' ')
+#     text = text.strip()
+#     words = text.split()
+#     first_word = words[0]
+#     return first_word
+#
+# assert first_word("Hello world") == "Hello", 'Test1'
+# assert first_word("greetings, friends") == "greetings", 'Test2'
+# assert first_word("don't touch it") == "don't", 'Test3'
+# assert first_word(".., and so on ...") == "and", 'Test4'
+# assert first_word("hi") == "hi", 'Test5'
+# assert first_word("Hello.World") == "Hello", 'Test6'
+# print('OK')
+
+# Перевірка на парність.
+# def is_even(number):
+#     num_is_even = str(number)[-1] in "02468"
+#     return num_is_even
+#
+# assert is_even(2494563894038**2) == True, 'Test1'
+# assert is_even(1056897**2) == False, 'Test2'
+# assert is_even(24945638940387**3) == False, 'Test3'
+# print('Ok')
+
+# Заповнення списку кубами чисел
+# def generate_cube_numbers(end):
+#     for x in range(2, end):
+#         cube_number = x**3
+#         if cube_number > end:
+#             return
+#         else:
+#             yield cube_number
+#
+# from inspect import isgenerator
+#
+# gen = generate_cube_numbers(1)
+# assert isgenerator(gen) == True, 'Test0'
+# assert list(generate_cube_numbers(10)) == [8], 'оскільки воно менше 10.'
+# assert list(generate_cube_numbers(100)) == [8, 27, 64], '5 у кубі це 125, а воно вже більше 100'
+# assert list(generate_cube_numbers(1000)) == [8, 27, 64, 125, 216, 343, 512, 729, 1000], '10 у кубі це 1000'
+# print("OK")
+
+
+
+# Генератор простих чисел
+# def prime_generator(end):
+#     for num in range(2, end+1):
+#         for n in range(2, num): #n- дільники
+#             if num % n == 0:
+#                 break
+#         else:
+#             yield num
+#
+# from inspect import isgenerator
+#
+# gen = prime_generator(1)
+# assert isgenerator(gen) == True, 'Test0'
+# assert list(prime_generator(10)) == [2, 3, 5, 7], 'Test1'
+# assert list(prime_generator(15)) == [2, 3, 5, 7, 11, 13], 'Test2'
+# assert list(prime_generator(29)) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29], 'Test3'
+# print('Ok')
+
+###
+# r (Read). Файл відкривається для читання. Якщо файл не знайдено, то генерується виняток FileNotFoundError
+#
+# w (Write). Файл відкривається для запису. Якщо файл відсутній, він створюється. Якщо такий файл вже є,
+# то він створюється заново, і відповідно старі дані в ньому стираються.
+#
+# a (Append). Файл відкривається для запису. Якщо файл відсутній, він створюється.
+# Якщо подібний файл вже є, дані записуються в його кінець.
+#
+# b (Binary). Використовується для роботи з бінарними файлами. Застосовується разом з іншими режимами – w або r.
+
+# # v1
+# try:
+#     my_file = open("hello.txt", "w")
+#     try:
+#         my_file.write("hello")
+#     except Exception as e:
+#         print(e)
+#     finally:
+#         my_file.close()
+# except Exception as e:
+#     print(e)
+#
+# # v2
+# with open("hello_1.txt", "w") as test_file:
+#     test_file.write("wwwwww")
+#
+#
+# with open("hello_1.txt", "a") as test_file:
+#     test_file.write("rrrrr\ntttttt\n")
+
+
+# with open("hello.txt", "r") as myfile:
+#     # v1
+#     # result = myfile.read()
+#     # print(result)
+#     # v2
+#     # result = myfile.readline()
+#     # print(result)
+#     # result = myfile.readline(1)
+#     # print(result)
+#     # v3
+#     # result = myfile.readlines()
+#     # print(result)
+#     # v4
+#     # for line in myfile:
+#     #     print(line, end="")
+#     # v5
+#     line = myfile.readline()
+#     while line:
+#         print(line, end="")
+#         line = myfile.readline()
+
+####
+# FILENAME = "notes.txt"
+# NOTES_COUNT = 3
+#
+# notes = []
+#
+# for i in range(NOTES_COUNT):
+#     notes.append(input(f"Enter note: {i + 1}: ").strip())
+#
+# with open(FILENAME, "a") as file:
+#     for i in range(NOTES_COUNT):
+#         file.write(f"{i + 1}. {notes[i]}\n")
+#
+# with open(FILENAME, "r") as file:
+#     print(file.read())
+
+####
+# import pickle
+#
+# FILENAME = "notes.dat"
+#
+# users = [
+#     ["John", "123456789"],
+#     ["Peter", "987654321"],
+#     ["Vasya", "1568654156"]
+# ]
+#
+# with open(FILENAME, "wb") as file:
+#     pickle.dump(users, file)  # серіалізація
+#
+# with open(FILENAME, "rb") as file:
+#     users_from_file = pickle.load(file)  # десеріалізація
+#     for user in users_from_file:
+#         print(f"Name: {user[0]} Phone: {user[1]}")
+
+
+# import shelve
+#
+# FILENAME = "notes"
+#
+# with shelve.open(FILENAME) as users:
+#     users["John"] = "123456789"
+#     users["Peter"] = "987654321"
+#     users["Vasya"] = "1568654156"
+#
+# with shelve.open(FILENAME) as users:
+#     users["Petya"] = "12312341234123"
+#     print(users["Petya"])
+#     print(users["John"])
+#
+#     for key in users:
+#         print(f"{key} - {users[key]}")
+#
+#     print(users)
+#     users.pop("John", "not found")
+#
+#     print("-" * 10)
+#
+#     for key in users:
+#         print(f"{key} - {users[key]}")
+
+####
+# import csv
+#
+# FILENAME = "users.csv"
+
+
+# v1
+# users = [
+#     ["John", "123456789"],
+#     ["Peter", "987654321"],
+#     ["Vasya", "1568654156"]
+# ]
+#
+# with open(FILENAME, "w", newline="") as file:
+#     writer = csv.writer(file)
+#     writer.writerows(users)
+#
+# with open(FILENAME, "a", newline="") as file:
+#     user = ["Anton", "111111"]
+#     writer = csv.writer(file)
+#     writer.writerow(user)
+#
+# with open(FILENAME, "r", newline="") as file:
+#     reader = csv.reader(file)
+#     for row in reader:
+#         print(f"{row[0]} - {row[1]}")
+
+# v2
+# users = [
+#     {"name": "John", "phone": "111"},
+#     {"name": "Petya", "phone": "222"},
+#     {"name": "Vasya", "phone": "333"},
+# ]
+#
+# with open(FILENAME, "w", newline="") as file:
+#     columns = ["name", "phone"]
+#     writer = csv.DictWriter(file, fieldnames=columns)
+#     writer.writeheader()
+#
+#     # all users
+#     writer.writerows(users)
+#
+#     # one user
+#     user: dict = {"name": "Test", "phone": "555"}
+#     writer.writerow(user)
+#
+# with open(FILENAME, "r", newline="") as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         print(row['name'], " - ", row['phone'])
+
+###
+# import os
+
+# os.mkdir("test_folder")
+
+# os.rmdir("test_folder")
+
+# file_name = "users.csv"
+# if os.path.exists(file_name):
+#     os.remove(file_name)
+#     print("File removed!")
+# else:
+#     print("File not found!")
+
+# доп: написати скрипт для видалення всіх файлів вказаної директорії
+#
+# # відносний шлях - щодо поточної директорії (папки, де знаходиться вихідник, який ви запустили)
+# with open("f1/f2/test.txt", "w") as myfile:
+#     myfile.write("hello world")
+# #
+# with open("../../../test1.txt", "w") as myfile:
+#     myfile.write("hello world")
+# абсолютний шлях - повний шлях починаючи з диска C://test_folder/...
+
+##
+# создать телефонную книгу с сохранением в файл txt
+# добавление
+# изменение контакта
+# удаление
+# поиск по имени
+
+#####
+# class Car:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def show_info(self):
+#         print(f"My car: {self.name}")
+#
+#
+# bmw = Car("BMW X5")
+# toyota = Car("TOYOTA Camry")
+# print(type(bmw))
+#
+# bmw.show_info()
+# toyota.show_info()
+
+# ООП - об'єктно орієнтоване програмування
+# Клас - кастомний тип даних, який описує деякий об'єкт.
+# Клас - креслення майбутнього екземпляра об'єкта.
+
+# Інкапсуляція - приховування внутрішньої реалізації та надання санкціонованого доступу
+# до інтерфейсу класу. Як чорна скринька.
+# Абстрагуємося від внутрішньої реалізації.
+
+# Спадкування - створення нового класу на основі вже існуючого.
+# Розширення базового класу – дочірніми/дочірніми класами.
+# Абстрагуємось від базового класу/класів, використовуючи дочірній клас.
+
+# Поліморфізм - один інтерфейс та багато реалізацій.
+# Абстрагуємося від конкретної реалізації
+
+################################################################
+# статичний метод (функція), поле (змінна) відносяться до класу, і до екземпляра
+# статичний ел-т можна використовувати не створюючи екземпляр класу
+# Найчастіше статичні класи використовують для опису конфігів та інших службових об'єктів, там де немає сенсу
+# створювати екземпляри
+# class Test:
+#     someText = "Hello World"
+#
+#     # конструктор без параметрів (не за замовчуванням)
+#     def __init__(self):
+#         self.text = "some text"
+#
+#     # конструктор класу - створює екземпляр об'єкту
+#     # def __new__(cls):
+#     #     pass
+#
+#     # для ініціалізації об'єкту
+#     # якщо явно не визначити конструктор __new__ -> то __init__ він створиться автоматично
+#     # def __init__(self):
+#     #     pass
+#
+#     @staticmethod
+#     def show():
+#         print("this is test class")
+#         # print(self.text)
+#
+#     def demo_func(self):
+#         print(f"this is demo func with value: {self.text}")
+#
+#
+# my_test1 = Test()
+# my_test1.show()
+#
+# my_test2 = Test()
+# my_test2.show()
+# my_test2.demo_func()
+#
+# Test.show()
+# Test.demo_func(my_test1)
+#
+# print(Test.someText)
+# print(my_test2.text)
+
+##
+# class Person:
+#     # __init__ Конструктор класу – дозволяє створити екземпляр класу. Можливо з параметрами та без параметрів.
+#     # self - посилання на контекст класу, екземпляр класу
+#     # контекст класу - все що є частиною класу (экземпляра) -
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def show_person(self):
+#         print(f"Name: {self.name} age: {self.age}")
+#
+#
+# user1 = Person("Vasya", 33)
+# user2 = Person("Petya", 44)
+# user1.show_person()
+# user2.show_person()
+# print(user1.name)
+
+# class Item:
+#
+#     def __init__(self, name, price, description, dimensions):
+#         self.price = price
+#         self.description = description
+#         self.dimensions = dimensions
+#         self.name = name
+#
+#     def __str__(self): # lemon, price: 5
+#         # print(self.dimensions)
+#         return f"{self.name}, price: {self.price}"
+#
+#
+# class User:
+#
+#     def __init__(self, name, surname, numberphone):
+#         self.name = name
+#         self.surname = surname
+#         self.numberphone = numberphone
+#
+#     def __str__(self):
+#         return f"{self.name.title()} {self.surname.title()}"
+#
+#
+# class Purchase:
+#     def __init__(self, user):
+#         self.products = {}
+#         self.user = user
+#         self.total = 0
+#
+#     def add_item(self, item, cnt):
+#         self.products[item] = cnt
+#
+#     def __str__(self):
+#         all_products = ""
+#         for product, count in self.products.items():
+#             all_products += f"\n{product.name}: {count} pcs."
+#         return f"User: {self.user}\nItems:{all_products}"
+#
+#     # """
+#     # User: Ivan Ivanov
+#     # Items:
+#     # lemon: 4 pcs.
+#     # apple: 20 pcs.
+#     # """
+#
+#     def get_total(self):
+#         all_sum = 0
+#         for product, count in self.products.items():
+#             all_sum += (product.price * count)
+#         return all_sum
+#
+#
+# lemon = Item('lemon', 5, "yellow", "small")
+# print(lemon)
+# # test1 = lemon.__str__()
+# # print(test1)
+# # test2 = str(lemon)
+# # print(test2)
+# apple = Item('apple', 2, "red", "middle")
+# # print(lemon)  # lemon, price: 5
+# buyer = User("Ivan", "Ivanov", "02628162")
+# print(buyer)  # Ivan Ivanov
+# #
+# cart = Purchase(buyer)
+# cart.add_item(lemon, 4)
+# cart.add_item(apple, 20)
+# print(cart)
+# print(cart.get_total())
+# # """
+# # User: Ivan Ivanov
+# # Items:
+# # lemon: 4 pcs.
+# # apple: 20 pcs.
+# # """
+# assert isinstance(cart.user, User) is True, 'Екземпляр класу User'
+# assert cart.get_total() == 60, "Всього 60"
+# assert cart.get_total() == 60, 'Повинно залишатися 60!'
+# cart.add_item(apple, 10)
+# print(cart)
+# # """
+# # User: Ivan Ivanov
+# # Items:
+# # lemon: 4 pcs.
+# # apple: 10 pcs.
+# # """
+# #
+# assert cart.get_total() == 40
+
+####
+# import re
+#
+# with open("draft.html", "r", encoding="utf-8") as html_file:
+#     for line in html_file:
+#         text = re.findall(r">[a-zA-ZА-Яа-я]+", line)
+#         if len(text) > 0:
+#             print(text)
+
+############
+# 1. Даний текстовий файл. Необхідно створити новий файл, який потрібно переписати з першого файлу всі слова, що складаються не менше ніж з семи літер.
+#
+# 2. Даний текстовий файл. Підрахувати кількість слів у ньому.
+#
+# 3. Створіть програму, яка перевіряє текст на неприпустимі слова.
+#
+# Якщо неприпустиме слово знайдено, його слід замінити на набір символів *.
+#
+# За підсумками роботи програми необхідно показати статистику дій.
+#
+# Наприклад, якщо й у нас є такий текст:
+#
+# To be, or not to be, that is the question, Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take arms against a sea of troubles, And by opposing end them? To die: to sleep; No more; and by a sleep to say we end The heart-ache and the thousand natural shocks That flesh is heir to, 'tis a consummation Devoutly to be wish'd. To die, to sleep
+#
+# Неприпустиме слово: die.
+#
+# Результат:
+#
+# To be, or not to be, that is the question, Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take arms against a sea of troubles, And by opposing end them? To ***: to sleep; No more; and by a sleep to say we end The heart-ache and the thousand natural shocks That flesh is heir to, 'tis a consummation Devoutly to be wish'd. To ***, to sleep.
+#
+# Статистика: 2 заміни слова die.
+#
+# Нотатка:
+#
+# Текст для всіх завдань можна написати самостійно або взяти з Інтернету.
+#
+# Логіка має працювати з будь-яким текстом.
+
+#Корзина для покупок
+# class Item:
+#     def __init__(self, name, price, description, dimensions):
+#         self.price = price
+#         self.description = description
+#         self.dimensions = dimensions
+#         self.name = name
+#
+#     def __str__(self):
+#         return f"Name: {self.name}, Price: {self.price}, Dimensions: {self.dimensions}, Description: {self.description} "
+#
+# class User:
+#     def __init__(self, name, surname, phonenumber):
+#         self.name = name
+#         self.surname = surname
+#         self.phonenumber = phonenumber
+#
+#     def __str__(self):
+#         return f"{self.name} {self.surname}, Phone: {self.phonenumber}"
+#
+# class Purchase:
+#     def __init__(self, user):
+#         self.products = {}
+#         self.user = user
+#
+#     def add_item(self, item, cnt):
+#         if  item not in self.products:
+#             self.products[item] = cnt
+#         else:
+#             self.products[item] += cnt
+#
+#     def __str__(self):
+#         all_products = ""
+#         for product, count in self.products.items():
+#             all_products = all_products + f"\n{product.name}:{count}pcs."
+#         return f"User: {self.user}\nItems: {all_products}\nTotal_cnt: {self.get_total()}"
+#
+#     def get_total(self):
+#         return sum(product.price*count for product, count in self.products.items())
+#
+# lemon = Item('lemon', 5, "yellow", "small", )
+# apple = Item('apple', 2, "red", "middle", )
+# print(lemon)
+# print(apple)
+# buyer = User("Ivan", "Ivanov", "02628162")
+#
+# cart = Purchase(buyer)
+# cart.add_item(lemon, 4)
+# cart.add_item(apple, 20)
+# print(cart)
+# assert isinstance(cart.user, User) is True, 'Екземпляр класу User'
+# assert cart.get_total() == 60, "Всього 60"
+# assert cart.get_total() == 60, 'Повинно залишатися 60!'
+# print("Ok")
+
+#Очистити текст від html-тегів
+# import codecs
+# import re
+# def delete_html_tags(html_file, result_file='cleaned.txt'):
+#       with codecs.open(html_file, 'r', 'utf-8') as file:
+#           no_tags_text = []
+#           for line in file:
+#               no_tags_text = no_tags_text + re.findall(r'>(.+)</', line)
+#           if len(no_tags_text) > 0:
+#             print (f"Result:{no_tags_text}")
+#             with codecs.open(result_file, 'w', 'utf-8') as new_file:
+#                   new_file.write('\n'.join(no_tags_text))
+# delete_html_tags('D:\\Завантаження\\draft (1).html')
+
+
+#Група студентів
+# class Human:
+#     def __init__(self, gender, age, name, surname):
+#         self.gender = gender
+#         self.age = age
+#         self.name = name
+#         self.surname = surname
+#
+#     def __str__(self):
+#         return f'Human: Gender: {self.gender}, Age: {self.age}, Name: {self.name}, Surname: {self.surname}'
+#
+# class Student(Human):
+#     def __init__(self, gender, age, name, surname, record_book):
+#         super().__init__(gender, age, name, surname)
+#         self.record_book = record_book
+#
+#     def __str__(self):
+#         return f"Student: Gender: {self.gender}, Age: {self.age}, Name:{self.name}, Surname:{self.surname}, Record_book: {self.record_book}"
+#
+# class Group:
+#     def __init__(self, number):
+#         self.number = number
+#         self.group = set()
+#
+#     def add_student(self, student):
+#         if isinstance(student, Student):
+#             self.group.add(student)
+#
+#     def delete_student(self, surname):
+#         self.group = {student for student in self.group if student.surname != surname}
+#
+#     def find_student(self, surname):
+#         for student in self.group:
+#             if student.surname == surname:
+#                 return student
+#
+#     def __str__(self):
+#         all_students = '\n'.join(str(student) for student in self.group)
+#         return f'Number:{self.number}\n {all_students} '
+#
+# st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
+# st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
+# gr = Group('PD1')
+# gr.add_student(st1)
+# gr.add_student(st2)
+# print(gr)
+# assert str(gr.find_student('Jobs')) == str(st1), 'Test1'
+# assert gr.find_student('Jobs2') is None, 'Test2'
+# assert isinstance(gr.find_student('Jobs'), Student) is True, 'Метод поиска должен возвращать экземпляр'
+# gr.delete_student('Taylor')
+# print(gr)
+# gr.delete_student('Taylor')  # No error!
+
+
+# Створити клас цифрового лічильника.
+# class Counter:
+#    def __init__(self, current=1, min_value=0, max_value=10):
+#        self.current = current
+#        self.min_value = min_value
+#        self.max_value = max_value
+#
+#    def set_current(self, start):
+#        self.current = start
+#
+#    def set_max(self, max_max):
+#        self.max_value = max_max
+#
+#    def set_min(self, min_min):
+#        self.min_value = min_min
+#
+#    def step_up(self):
+#        if self.current >= self.max_value:
+#            raise ValueError ("Досягнуто максимуму")
+#        else:
+#            self.current = self.current + 1
+#
+#    def step_down(self):
+#        if self.current <= self.min_value:
+#            raise ValueError("Досягнуто мінімум")
+#        else:
+#            self.current = self.current - 1
+#
+#    def get_current(self):
+#        return self.current
+#
+# counter = Counter()
+# counter.set_current(7)
+# counter.step_up()
+# counter.step_up()
+# counter.step_up()
+# assert counter.get_current() == 10, 'Test1'
+# try:
+#     counter.step_up()  # ValueError
+# except ValueError as e:
+#     print(e) # Достигнут максимум
+# assert counter.get_current() == 10, 'Test2'
+#
+# counter.set_min(7)
+# counter.step_down()
+# counter.step_down()
+# counter.step_down()
+# assert counter.get_current() == 7, 'Test3'
+# try:
+#     counter.step_down()  # ValueError
+# except ValueError as e:
+#     print(e) # Достигнут минимум
+# assert counter.get_current() == 7, 'Test4'
+
+
+#Створення власних модулів
+# class Human:
+#     def __init__(self, gender, age, name, surname):
+#         self.gender = gender
+#         self.age = age
+#         self.name = name
+#         self.surname = surname
+#
+#     def __str__(self):
+#         return f'Human: Gender: {self.gender}, Age: {self.age}, Name: {self.name}, Surname: {self.surname}'
+#
+# class Student(Human):
+#     def __init__(self, gender, age, name, surname, record_book):
+#         super().__init__(gender, age, name, surname)
+#         self.record_book = record_book
+#
+#     def __str__(self):
+#         return f"Student: Gender: {self.gender}, Age: {self.age}, Name:{self.name}, Surname:{self.surname}, Record_book: {self.record_book}"
+#
+# class Group:
+#     def __init__(self, number):
+#         self.number = number
+#         self.group = set()
+#
+#     def add_student(self, student):
+#         if isinstance(student, Student):
+#             self.group.add(student)
+#
+#     def delete_student(self, surname):
+#         self.group = {student for student in self.group if student.surname != surname}
+#
+#     def find_student(self, surname):
+#         for student in self.group:
+#             if student.surname == surname:
+#                 return student
+#
+#     def __str__(self):
+#         all_students = '\n'.join(str(student) for student in self.group)
+#         return f'Number:{self.number}\n {all_students} '
+#
+# st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
+# st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
+# gr = Group('PD1')
+# gr.add_student(st1)
+# gr.add_student(st2)
+# print(gr)
+# assert str(gr.find_student('Jobs')) == str(st1), 'Test1'
+# assert gr.find_student('Jobs2') is None, 'Test2'
+# assert isinstance(gr.find_student('Jobs'), Student) is True, 'Метод поиска должен возвращать экземпляр'
+# gr.delete_student('Taylor')
+# print(gr)
+# gr.delete_student('Taylor')  # No error!
+
+
+# Клас «Правильний дріб»
+# class Fraction:
+#     def __init__(self, numer , den): #numer - numerator, den - denominator
+#         if den == 0:
+#             raise ValueError("Denominator can't be 0")
+#         self.numer  = numer
+#         self.den = den
+#
+#     def __float__(self):
+#         return self.numer/self.den
+#
+#     def __mul__(self, other):
+#         if isinstance(other, Fraction):
+#             new_numer = self.numer * other.numer
+#             new_den = self.den * other.den
+#             result = Fraction(new_numer, new_den)
+#             return result
+#         else:
+#             raise ValueError("Illegal type of the argument")
+#
+#     def __add__(self, other):
+#         if isinstance(other, Fraction):
+#             if self.den == other.den:
+#                 return Fraction(self.numer + other.numer, self.den)
+#             else:
+#                 new_denom = self.den * other.den
+#                 new_numer = (self.numer * other.den) + (other.numer * self.den)
+#             return Fraction(new_numer, new_denom)
+#         else:
+#             raise ValueError("Illegal type of the argument")
+#
+#     def __sub__(self, other):
+#         if isinstance(other, Fraction):
+#             if self.den != other.den:
+#                 new_numer = self.numer * other.den - other.numer * self.den
+#                 new_den = self.den * other.den
+#             else:
+#                 new_numer = self.numer - other.numer
+#                 new_den = self.den
+#             return Fraction(new_numer, new_den)
+#         else:
+#             raise ValueError("Illegal type of the argument")
+#
+#     def __eq__(self, other):
+#         if isinstance(other, Fraction):
+#             return self.numer * other.den == other.numer * self.den
+#         else:
+#             return False
+#
+#     def __lt__(self, other):
+#         if isinstance(other, Fraction):
+#             return self.__float__() < other.__float__()
+#         else:
+#             return False
+#
+#     def __gt__(self, other):
+#         if isinstance(other, Fraction):
+#             return self.__float__() > other.__float__()
+#         else:
+#             return False
+#
+#     def __str__(self):
+#         return f"Fraction: {self.numer}, {self.den}"
+#
+# f_a = Fraction(2, 3)
+# f_b = Fraction(3, 6)
+# f_c = f_b + f_a
+# assert str(f_c) == 'Fraction: 21, 18'
+# f_d = f_b * f_a
+# assert str(f_d) == 'Fraction: 6, 18'
+# f_e = f_a - f_b
+# assert str(f_e) == 'Fraction: 3, 18'
+#
+# assert f_d < f_c  # True
+# assert f_d > f_e  # True
+# assert f_a != f_b  # True
+# f_1 = Fraction(2, 4)
+# f_2 = Fraction(3, 6)
+# assert f_1 == f_2  # True
+# print('OK')
+
+
+# # «Прямокутник
+# nums = (int, float)
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+#
+#     def get_square(self):
+#         return self.width * self.height
+#
+#     def __eq__(self, other):
+#         if isinstance(other, Rectangle):
+#             return self.get_square() == other.get_square()
+#         else:
+#             return False
+#
+#     def __add__(self, other):
+#         if isinstance(other, Rectangle):
+#             new_square = self.get_square() + other.get_square()
+#             new_width = self.width
+#             new_height = new_square//new_width
+#             return Rectangle(new_width, new_height)
+#         else:
+#             raise ValueError("Illegal type of the argument")
+#
+#     def __mul__(self, n):
+#         if isinstance(n, nums):
+#             new_square = self.get_square() * n
+#             new_width = self.width
+#             new_height = new_square // new_width
+#             return Rectangle(new_width, new_height)
+#         else:
+#             raise ValueError("Illegal type of the argument")
+#
+#     def __str__(self):
+#         return f"Rectangle({self.width}, {self.height})"
+#
+#
+# r1 = Rectangle(2, 4)
+# r2 = Rectangle(3, 6)
+# assert r1.get_square() == 8, 'Test1'
+# assert r2.get_square() == 18, 'Test2'
+#
+# r3 = r1 + r2
+# assert r3.get_square() == 26, 'Test3'
+#
+# r4 = r1 * 4
+# assert r4.get_square() == 32, 'Test4'
+#
+# assert Rectangle(3, 6) == Rectangle(2, 9), 'Test5'
+# print ('ok')
+
+# дописать остальные операторы в классе Car
+# class Car:
+#     def __init__(self, name, price, year): #year - year of production
+#         self.name = name
+#         self.price = price
+#         self.year = year
+#
+#     def show_info(self):
+#         print(f"Name: {self.name}")
+#         print(f"Price: {self.price}")
+#         print(f"Year of production: {self.year}")
+#
+#     def __add__(self, other):
+#         if isinstance(other, Car):
+#               return self.price + other.price
+#         elif other > 0:
+#              return self.price + other
+#         else:
+#              raise ValueError("Incorrect param")
+#
+#     def __sub__(self, other):
+#         if isinstance(other, Car):
+#             if other.year > self.year:
+#                 return other.year - self.year
+#             else:
+#                 return self.year - other.year
+#         else:
+#             raise ValueError("Incorrect param")
+#
+#     def __mul__(self, other):
+#         if isinstance(other, Car):
+#             return self.price * other.price
+#         else:
+#             raise ValueError("Incorrect param")
+#
+#     def __truediv__(self, other):
+#         if isinstance(other, Car):
+#             if other.price > self.price:
+#                 return other.price / self.price
+#             else:
+#                 return self.price / other.price
+#         else:
+#             raise ValueError("Incorrect param")
+#
+#     def __gt__(self, other):
+#         if isinstance(other, Car):
+#             return self.price > other.price
+#         else:
+#             raise ValueError("Incorrect param")
+#
+#     def __lt__(self, other):
+#         if isinstance(other, Car):
+#             return self.price < other.price
+#         else:
+#             raise ValueError("Incorrect param")
+#
+#     def __eq__(self, other):
+#         if isinstance(other, Car):
+#             return self.price == other.price
+#         else:
+#             raise ValueError("Incorrect param")
+#
+#
+# toyota = Car("camry", 123456, 1982)
+# toyota.show_info()
+#
+# bmw = Car("x5", 321654, 1999)
+# bmw.show_info()
+#
+# result = toyota + bmw
+# print(result)
+#
+# result = toyota + 123
+# print(result)
+#
+# result = toyota - bmw
+# print(result)
+#
+# result = toyota * bmw
+# print(result)
+#
+# result = toyota / bmw
+# print(result)
+#
+# print(toyota > bmw)
+# print(toyota < bmw)
+# print(toyota == bmw)
+
+
+# def my_decorator(func):
+#     def wrapper():
+#         print("Something is happening before the function is called.")
+#         func()
+#         print("Something is happening after the function is called.")
+#     return wrapper
+#
+# @my_decorator
+# def say_hello():
+#     print("Hello!")
+#
+# # Виклик функції з декоратором
+# say_hello()
+
+# def decorator_with_args(prefix):
+#     def decorator(func):
+#         def wrapper(*args, **kwargs):
+#             print(f"{prefix}: Something is happening before the function is called.")
+#             result = func(*args, **kwargs)
+#             print(f"{prefix}: Something is happening after the function is called.")
+#             return result
+#         return wrapper
+#     return decorator
+#
+# @decorator_with_args("LOG")
+# def say_hello():
+#     print("Hello!")
+#
+# # Виклик функції з декоратором із аргументами
+# say_hello()
+
+# import math
+# def calculate_circle_area(radius):
+#     return math.pi * radius**2
+# radius_1 = calculate_circle_area(5)
+# radius_2 = calculate_circle_area(0)
+# radius_3 = calculate_circle_area(10)
+# radius_4 = calculate_circle_area(2.5)
+# radius_5 = calculate_circle_area(7)
+# print(radius_1, radius_2, radius_3, radius_4, radius_5)
+
+# def reverse_words(sentence):
+#         words = sentence.split()
+#         reversed = [word[::-1] for word in words]
+#         new_sent = ' '.join(reversed)
+#         return new_sent
+
+
+# def find_gcd(a, b):
+#     if a == 0:
+#         return b
+#     elif b == 0:
+#         return a
+#     elif a >= b:
+#         return find_gcd(a % b, b)
+#     else:
+#         return find_gcd(a, b % a)
+# print(find_gcd(12, 18))
+# print(find_gcd(15, 25))
+# print(find_gcd(12, 20))
+# print(find_gcd(7, 11))
+# print(find_gcd(30, 45))
+# print(find_gcd(17, 23))
 
 
 
 
+#----------------------------------------------------------------------------
+#----------------------------------------------------------------------------
+#----------------------------------------------------------------------------
 
+# 1 - Дано число. Проверьте, отрицательное оно или нет. Выведите об этом информацию в консоль.
+# n = -12
+# if n < 0:
+#     print("Negative num")
+# if n > 0:
+#     print ("+ num")
+#
+#
+# # 2 - Дана строка. Выведите в консоль длину этой строки.
+# st = "fwbr453"
+# print (len(st))
+#
+# # 3 - Дана строка. Выведите в консоль последний символ строки.
+# st = "fwbr453"
+# print (st[-1])
+#
+# # 4 - Дано число. Проверьте, четное оно или нет.
+# num = 12
+# if num % 2 == 0:
+#     print ("Is even")
+# else:
+#     print("Isn't even")
 
+# 5 - Даны два слова. Проверьте, что первые буквы этих слов совпадают.
+wor = "Hello"
+word = "hi"
+if wor[0] == word[0]:
+    print("same")
+
+# 6 - Дано слово. Получите его последнюю букву. Если слово заканчивается на мягкий знак, то получите предпоследнюю букву.
+# word = "Конь"
+# if word[-1] == "ь":
+#     print (word[-2])
+# else:
+#     print (word[-1])
+
+#Дано число. Выведите в консоль первую цифру этого числа.
+# n = int(str(62131)[0])
+# print(n)
+
+#Дано число. Выведите в консоль последнюю цифру этого числа.
+# n = int(str(62131)[-1])
+# print(n)
+
+#Дано число. Выведите в консоль сумму первой и последней цифры этого числа.
+# n = 353345
+# n1 = int(str(353345)[0])
+# n2 = int(str(353345)[-1])
+# total = int(n1+n2)
+# print (total)
+
+#Дано число. Выведите количество цифр в этом числе.
+# n= 4242
+# total = len(str(n))
+# print(total)
+
+#Даны два числа. Проверьте, что первые цифры этих чисел совпадают.
+# n1 = int(str(352)[0])
+# n2 = int(str(643)[0])
+# if n1 == n2:
+#     print("same")
+# else:
+#     print ("dif")
+
+#Дан список: [1, 2, 3, 4, 5, 6]  Получите из него следующий срез: [1, 2, 3]
+# nums = [1, 2, 3, 4, 5, 6]
+# new_list = nums[:3]
+# print (new_list)
 
 
