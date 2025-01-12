@@ -62,6 +62,7 @@ class ArticleGenerationService(GenerationService):
             "idea": random_string(50),
         }
 
+
 generation = ArticleGenerationService()
 
 @app.get("/article-ideas")
@@ -75,6 +76,8 @@ async def technical_guide():
 @app.get("/fiction")
 async def fiction():
     return await generation.generate_fiction()
+
+
     
 
 
