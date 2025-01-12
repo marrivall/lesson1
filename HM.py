@@ -1,3 +1,236 @@
+# дописать остальные операторы в классе Car
+class Car:
+    def __init__(self, name, price, year): #year - year of production
+        self.name = name
+        self.price = price
+        self.year = year
+
+    def show_info(self):
+        print(f"Name: {self.name}")
+        print(f"Price: {self.price}")
+        print(f"Year of production: {self.year}")
+
+    def __add__(self, other):
+        if isinstance(other, Car):
+              return self.price + other.price
+        elif other > 0:
+             return self.price + other
+        else:
+             raise ValueError("Incorrect param")
+
+    def __sub__(self, other):
+        if isinstance(other, Car):
+            if other.year > self.year:
+                return other.year - self.year
+            else:
+                return self.year - other.year
+        else:
+            raise ValueError("Incorrect param")
+
+    def __mul__(self, other):
+        if isinstance(other, Car):
+            return self.price * other.price
+        else:
+            raise ValueError("Incorrect param")
+
+    def __truediv__(self, other):
+        if isinstance(other, Car):
+            if other.price > self.price:
+                return other.price / self.price
+            else:
+                return self.price / other.price
+        else:
+            raise ValueError("Incorrect param")
+
+    def __gt__(self, other):
+        if isinstance(other, Car):
+            return self.price > other.price
+        else:
+            raise ValueError("Incorrect param")
+
+    def __lt__(self, other):
+        if isinstance(other, Car):
+            return self.price < other.price
+        else:
+            raise ValueError("Incorrect param")
+
+    def __eq__(self, other):
+        if isinstance(other, Car):
+            return self.price == other.price
+        else:
+            raise ValueError("Incorrect param")
+
+
+toyota = Car("camry", 123456, 1982)
+toyota.show_info()
+
+bmw = Car("x5", 321654, 1999)
+bmw.show_info()
+
+result = toyota + bmw
+print(result)
+
+result = toyota + 123
+print(result)
+
+result = toyota - bmw
+print(result)
+
+result = toyota * bmw
+print(result)
+
+result = toyota / bmw
+print(result)
+
+print(toyota > bmw) #False
+print(toyota < bmw) #True
+print(toyota == bmw) #false
+
+
+# «Прямокутник
+nums = (int, float)
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def get_square(self):
+        return self.width * self.height
+
+    def __eq__(self, other):
+        if isinstance(other, Rectangle):
+            return self.get_square() == other.get_square()
+        else:
+            return False
+
+    def __add__(self, other):
+        if isinstance(other, Rectangle):
+            new_square = self.get_square() + other.get_square()
+            new_width = self.width
+            new_height = new_square//new_width
+            return Rectangle(new_width, new_height)
+        else:
+            raise ValueError("Illegal type of the argument")
+
+    def __mul__(self, n):
+        if isinstance(n, nums):
+            new_square = self.get_square() * n
+            new_width = self.width
+            new_height = new_square // new_width
+            return Rectangle(new_width, new_height)
+        else:
+            raise ValueError("Illegal type of the argument")
+
+    def __str__(self):
+        return f"Rectangle({self.width}, {self.height})"
+
+
+r1 = Rectangle(2, 4)
+r2 = Rectangle(3, 6)
+assert r1.get_square() == 8, 'Test1'
+assert r2.get_square() == 18, 'Test2'
+
+r3 = r1 + r2
+assert r3.get_square() == 26, 'Test3'
+
+r4 = r1 * 4
+assert r4.get_square() == 32, 'Test4'
+
+assert Rectangle(3, 6) == Rectangle(2, 9), 'Test5'
+print ('ok')
+
+
+
+# Клас «Правильний дріб»
+class Fraction:
+    def __init__(self, numer , den): #numer - numerator, den - denominator
+        if den == 0:
+            raise ValueError("Denominator can't be 0")
+        self.numer  = numer
+        self.den = den
+
+    def __float__(self):
+        return self.numer/self.den
+
+    def __mul__(self, other):
+        if isinstance(other, Fraction):
+            new_numer = self.numer * other.numer
+            new_den = self.den * other.den
+            result = Fraction(new_numer, new_den)
+            return result
+        else:
+            raise ValueError("Illegal type of the argument")
+
+    def __add__(self, other):
+        if isinstance(other, Fraction):
+            if self.den == other.den:
+                return Fraction(self.numer + other.numer, self.den)
+            else:
+                new_denom = self.den * other.den
+                new_numer = (self.numer * other.den) + (other.numer * self.den)
+            return Fraction(new_numer, new_denom)
+        else:
+            raise ValueError("Illegal type of the argument")
+
+    def __sub__(self, other):
+        if isinstance(other, Fraction):
+            if self.den != other.den:
+                new_numer = self.numer * other.den - other.numer * self.den
+                new_den = self.den * other.den
+            else:
+                new_numer = self.numer - other.numer
+                new_den = self.den
+            return Fraction(new_numer, new_den)
+        else:
+            raise ValueError("Illegal type of the argument")
+
+    def __eq__(self, other):
+        if isinstance(other, Fraction):
+            return self.numer * other.den == other.numer * self.den
+        else:
+            return False
+
+    def __lt__(self, other):
+        if isinstance(other, Fraction):
+            return self.__float__() < other.__float__()
+        else:
+            return False
+
+    def __gt__(self, other):
+        if isinstance(other, Fraction):
+            return self.__float__() > other.__float__()
+        else:
+            return False
+
+    def __str__(self):
+        return f"Fraction: {self.numer}, {self.den}"
+
+f_a = Fraction(2, 3)
+f_b = Fraction(3, 6)
+f_c = f_b + f_a
+assert str(f_c) == 'Fraction: 21, 18'
+f_d = f_b * f_a
+assert str(f_d) == 'Fraction: 6, 18'
+f_e = f_a - f_b
+assert str(f_e) == 'Fraction: 3, 18'
+
+assert f_d < f_c  # True
+assert f_d > f_e  # True
+assert f_a != f_b  # True
+f_1 = Fraction(2, 4)
+f_2 = Fraction(3, 6)
+assert f_1 == f_2  # True
+print('OK')
+
+
+
+
+
+
+
+
+
+
 # Створити клас цифрового лічильника.
 class Counter:
    def __init__(self, current=1, min_value=0, max_value=10):
