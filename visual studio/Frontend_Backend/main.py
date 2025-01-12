@@ -62,7 +62,6 @@ class ArticleGenerationService(GenerationService):
             "idea": random_string(50),
         }
 
-
 generation = ArticleGenerationService()
 
 @app.get("/article-ideas")
